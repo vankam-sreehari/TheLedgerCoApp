@@ -10,17 +10,18 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 import static com.ledgerco.app.constants.ServiceConstants.*;
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        //Scanner scanner = new Scanner(System.in);
-        //String filePath = scanner.next();
+        Scanner scanner = new Scanner(System.in);
+        String filePath = scanner.next();
 
         BufferedReader reader = new BufferedReader(
-                new FileReader("/Users/sree.hari/Desktop/rome-models/TheLedgerCoApp/src/main/resources/InputFile"));
+                new FileReader(filePath));
         try {
             String request;
             while ((request = reader.readLine()) != null) {
